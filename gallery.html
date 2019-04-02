@@ -10,27 +10,14 @@ layout: default
             <h3 class="title-w3pvt text-center mb-lg-5 mb-3"> Recent Projects</h3>
 
             <div class="row news-grids mt-md-5 mt-4 text-center">
+                {% for gallery_item in site.gallery %}
                 <div class="col-md-6 gal-img">
-                    <a href="#gal1"><img src="images/g1.jpg" alt="Presell" class="img-fluid"></a>
-                    <h5 class="gal-info">Project 1 <span class="decription">Website</span>
+                    <a href={{ gallery_item.link }}><img src={{ gallery_item.image_path }} alt="Presell" class="img-fluid"></a>
+                    <h5 class="gal-info">{{ gallery_item.project_name }} <span class="decription">{{ gallery_item.category }}</span>
                     </h5>
                 </div>
-                <div class="col-md-6 gal-img">
-                    <a href="#gal2"><img src="images/g2.jpg" alt="Presell" class="img-fluid"></a>
-                    <h5 class="gal-info">Project 2 <span class="decription">Website</span>
-                    </h5>
-                </div>
-                <div class="col-md-6 gal-img mt-md-5">
-                    <a href="#gal3"><img src="images/g3.jpg" alt="Presell" class="img-fluid"></a>
-                    <h5 class="gal-info">Project 3 <span class="decription">Website</span>
-                    </h5>
-                </div>
-                <div class="col-md-6 gal-img">
-                    <a href="#gal4"><img src="images/g4.jpg" alt="Presell" class="img-fluid"></a>
-                    <h5 class="gal-info">Project 4 <span class="decription">Website</span>
-                    </h5>
-                </div>
-
+                
+                 {% endfor %>}   
             </div>
         </div>
     </section>
